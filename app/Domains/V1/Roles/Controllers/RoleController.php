@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Domains\V1\Roles\Controllers;
 
 use App\Domains\V1\Roles\Requests\AddRequest;
 use App\Domains\V1\Roles\Requests\UpdateRequest;
+use App\Domains\V1\Roles\Resources\RoleResource;
 use App\Domains\V1\Roles\Services\RoleService;
+use App\Http\Controllers\Controller;
 use App\Http\Traits\GeneralTrait;
 use App\Models\Role;
 use Illuminate\Http\Request;
@@ -17,7 +19,7 @@ class RoleController extends Controller
     public function index()
     {
         $roles = $this->roles->paginate();
-        return view('admin.roles.index', compact('roles'));
+        return $this->returnData("data", ['roles' => RoleResource::collection($roles)], __('api.returnData'));
     }
 
     public function create(Role $role)
