@@ -11,15 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('submission_files', function (Blueprint $table) {
             $table->id();
-            // foreign key to users table
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            // rank field with float type
-            $table->float('rank')->default(0);
-            // expertise field
-            $table->string('expertise')->nullable();
+            // foreign key to project_submissions table
+            $table->unsignedBigInteger('project_submission_id');
+            $table->foreign('project_submission_id')->references('id')->on('project_submissions')->onDelete('cascade');
+            // file path field 
+            $table->string('file_path');
             // soft deletes
             $table->softDeletes();
             $table->timestamps();
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('submission_files');
     }
 };
