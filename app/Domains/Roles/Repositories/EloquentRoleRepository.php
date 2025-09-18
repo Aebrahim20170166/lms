@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domains\V1\Roles\Repositories;
+namespace App\Domains\Roles\Repositories;
 
-use App\Domains\V1\Roles\Contracts\RoleRepositoryInterface;
+use App\Domains\Roles\Contracts\RoleRepositoryInterface;
 use App\Models\Role;
 
 class EloquentRoleRepository implements RoleRepositoryInterface

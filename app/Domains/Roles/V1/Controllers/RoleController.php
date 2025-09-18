@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Domains\V1\Roles\Controllers;
+namespace App\Domains\Roles\V1\Controllers;
 
-use App\Domains\V1\Roles\Requests\AddRequest;
-use App\Domains\V1\Roles\Requests\UpdateRequest;
-use App\Domains\V1\Roles\Resources\RoleResource;
-use App\Domains\V1\Roles\Services\RoleService;
+use App\Domains\Roles\V1\Requests\AddRequest;
+use App\Domains\Roles\V1\Requests\UpdateRequest;
+use App\Domains\Roles\V1\Resources\RoleResource;
+use App\Domains\Roles\Services\RoleService;
 use App\Http\Controllers\Controller;
 use App\Http\Traits\GeneralTrait;
 use App\Models\Role;

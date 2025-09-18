@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domains\V1\Roles\Services;
+namespace App\Domains\Roles\Services;
 
-use App\Domains\V1\Roles\Contracts\RoleRepositoryInterface;
+use App\Domains\Roles\Contracts\RoleRepositoryInterface;
 
 /**
  * Service layer for managing roles.

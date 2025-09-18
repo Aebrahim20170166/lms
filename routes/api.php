@@ -1,6 +1,6 @@
 <?php
 
-use App\Domains\V1\Roles\Controllers\RoleController;
+use App\Domains\Roles\V1\Controllers\RoleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('roles', RoleController::class);
+Route::apiResource('roles', RoleController::class);
