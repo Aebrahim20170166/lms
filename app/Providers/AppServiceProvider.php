@@ -12,7 +12,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(
+            \App\Domains\Countries\Contracts\CountryInterface::class,
+            \App\Domains\Countries\Repositories\CountryRepository::class,
+        );
+
+        $this->app->bind(
+            \App\Domains\Cities\Contracts\CityInterface::class,
+            \App\Domains\Cities\Repositories\CityRepository::class,
+        );
     }
 
     /**
