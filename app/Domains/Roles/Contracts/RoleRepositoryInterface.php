@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domains\V1\Roles\Contracts;
+namespace App\Domains\Roles\Contracts;
 
 /**
  * Interface RoleRepositoryInterface
