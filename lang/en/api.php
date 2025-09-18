@@ -81,5 +81,17 @@ return [
     'favouriteNotFound' => 'Item not found in favourites.',
     'addCart' => 'Added to cart successfully',
     'cartNotFound' => 'The item was not found in the cart',
-    'deleteCart' => 'Removed from cart successfully'
+    'deleteCart' => 'Removed from cart successfully',
+    'countries_all' => 'All countries retrieved successfully',
+    'country_not_found' => 'Country not found',
+    'country_found' => 'Country found successfully',
+    'country_created' => 'Country created successfully',
+    'country_updated' => 'Country updated successfully',
+    'country_deleted' => 'Country deleted successfully',
+    'cities_all' => 'All cities retrieved successfully',
+    'city_not_found' => 'City not found',
+    'city_found' => 'City found successfully',
+    'city_created' => 'City created successfully',
+    'city_updated' => 'City updated successfully',
+    'city_deleted' => 'City deleted successfully',  
 ];
