@@ -21,9 +21,20 @@ class CityController extends Controller
     }
     public function index(Request $request)
     {
-        $perPage = $request->get('page', 10);
+        $perPage = (int) $request->get('per_page', 10);
         $cities = $this->service->paginate($perPage);
-        return $this->returnData("data", ["cities" => CityResource::collection($cities)], __("api.all_cities"));
+
+        $pagination = [
+            'total'         => $cities->total(),
+            'per_page'      => $cities->perPage(),
+            'current_page'  => $cities->currentPage(),
+            'total_pages'   => $cities->lastPage(),
+        ];
+
+        return $this->returnData("data", [
+            "cities" => CityResource::collection($cities),
+            "pagination" => $pagination,
+        ], __("api.all_cities"));
     }
 
     public function show(int $id)
