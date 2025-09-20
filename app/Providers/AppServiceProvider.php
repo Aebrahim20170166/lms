@@ -21,6 +21,16 @@ class AppServiceProvider extends ServiceProvider
             \App\Domains\Cities\Contracts\CityInterface::class,
             \App\Domains\Cities\Repositories\CityRepository::class,
         );
+
+        $this->app->bind(
+            \App\Domains\Levels\Contracts\LevelInterface::class,
+            \App\Domains\Levels\Repositories\LevelRepository::class,
+        );
+
+        $this->app->bind(
+            \App\Domains\Courses\Contracts\CourseInterface::class,
+            \App\Domains\Courses\Repositories\CourseRepository::class,
+        );
     }
 
     /**
