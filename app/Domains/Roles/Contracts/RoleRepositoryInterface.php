@@ -17,10 +17,17 @@ interface RoleRepositoryInterface
     public function paginate(int $perPage = 10);
 
     /**
+     * Retrieve all roles without pagination.
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function all();
+
+    /**
      * Find a role by its ID.
      *
      * @param int $id Role ID
-     * @return \App\Models\Role|null Returns the role if found, null otherwise
+     * @return \App\Domains\Roles\Models\Role|null Returns the role if found, null otherwise
      */
     public function find(int $id);
 
@@ -28,7 +35,7 @@ interface RoleRepositoryInterface
      * Create a new role with the given data.
      *
      * @param array $data Role data (name, permissions, etc.)
-     * @return \App\Models\Role The newly created role
+     * @return \App\Domains\Roles\Models\Role The newly created role
      */
     public function create(array $data);
 
@@ -37,7 +44,7 @@ interface RoleRepositoryInterface
      *
      * @param int $id Role ID to update
      * @param array $data Updated role data
-     * @return \App\Models\Role|null Returns updated role, or null if not found
+     * @return \App\Domains\Roles\Models\Role|null Returns updated role, or null if not found
      */
     public function update(int $id, array $data);
 
@@ -48,4 +55,11 @@ interface RoleRepositoryInterface
      * @return bool True if deleted successfully, false otherwise
      */
     public function delete(int $id);
+
+    /**
+     * Retrieve available permissions list.
+     *
+     * @return array List of permissions based on the current app locale
+     */
+    public function permissions();
 }

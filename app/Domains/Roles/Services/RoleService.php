@@ -6,7 +6,7 @@ use App\Domains\Roles\Contracts\RoleRepositoryInterface;
 
 /**
  * Service layer for managing roles.
- * Acts as a middle layer between controllers and the repository.
+ * Works as a middle layer between controllers and the repository.
  */
 class RoleService
 {
@@ -25,17 +25,30 @@ class RoleService
      */
     public function paginate(int $perPage = 10)
     {
+        // Return roles with pagination
         return $this->repo->paginate($perPage);
+    }
+
+    /**
+     * Get all roles without pagination.
+     *
+     * @return \Illuminate\Support\Collection
+     */
+    public function all()
+    {
+        // Return all roles without pagination
+        return $this->repo->all();
     }
 
     /**
      * Find a specific role by ID.
      *
      * @param int $id Role ID
-     * @return \App\Models\Role|null Returns the role if found, null otherwise
+     * @return \App\Models\Role|null
      */
     public function find(int $id)
     {
+        // Find a role by its ID
         return $this->repo->find($id);
     }
 
@@ -43,10 +56,11 @@ class RoleService
      * Create a new role.
      *
      * @param array $data Role data (e.g., name, permissions)
-     * @return \App\Models\Role The newly created role
+     * @return \App\Models\Role
      */
     public function create(array $data)
     {
+        // Create a new role with given data
         return $this->repo->create($data);
     }
 
@@ -55,10 +69,11 @@ class RoleService
      *
      * @param int $id Role ID
      * @param array $data Updated role data
-     * @return \App\Models\Role|null Returns updated role or null if not found
+     * @return \App\Models\Role|null
      */
     public function update(int $id, array $data)
     {
+        // Update role data by its ID
         return $this->repo->update($id, $data);
     }
 
@@ -70,6 +85,18 @@ class RoleService
      */
     public function delete(int $id)
     {
+        // Delete role by its ID
         return $this->repo->delete($id);
+    }
+
+    /**
+     * Get all available permissions.
+     *
+     * @return \Illuminate\Support\Collection
+     */
+    public function permissions()
+    {
+        // Return all permissions
+        return $this->repo->permissions();
     }
 }

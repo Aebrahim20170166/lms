@@ -2,6 +2,7 @@
 
 use App\Domains\Cities\V1\Controllers\CityController;
 use App\Domains\Countries\V1\Controllers\CountryController;
+use App\Domains\Enrollments\V1\Controllers\EnrollmentsController;
 use App\Domains\Roles\V1\Controllers\RoleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::apiResource('roles', RoleController::class);
-// api resource for countries and cities are defined in their respective modules
+Route::get('roles/show/permissions', [RoleController::class, 'permissions']);
+Route::apiResource('enrollments', EnrollmentsController::class);
 Route::apiResource('countries', CountryController::class);
 Route::apiResource('cities', CityController::class);

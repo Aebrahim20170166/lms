@@ -1,6 +1,13 @@
 <?php
 
 return [
+    'addRole' => 'تم اضافة الصلاحيات بنجاح',
+    'updateRole' => 'تم تحديث الصلاحيات بنجاح',
+    'deleteRole' => 'تم حذف الصلاحيات بنجاح',
+    'fetch_successEnrollment' => 'تم الجلب بنجاح.',
+    'addEnrollment'       => 'تم إنشاء التسجيل بنجاح.',
+    'updatedEnrollment'       => 'تم تحديث التسجيل بنجاح.',
+    'deletedEnrollment'       => 'تم حذف التسجيل بنجاح.',
     'notFoundRoute' => 'المسار غير موجود',
     'returnData' => 'تم استرجاع الداتا بنجاح',
     'notAuth' => 'غير مصرح لك بالدخول',

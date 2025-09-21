@@ -148,7 +148,16 @@ return [
     'ulid' => ':attribute يجب أن يكون ULID صالح',
     'uuid' => ':attribute يجب أن يكون UUID صالح',
     'invalid_credentials' => 'بيانات التسجيل غير صحيحة',
-    
+
+    'name_required'              => 'حقل الاسم مطلوب.',
+    'name_string'                => 'الاسم يجب أن يكون نصاً.',
+
+    'permissions_ar_required'    => 'حقل الصلاحيات بالعربية مطلوب.',
+    'permissions_ar_string'      => 'الصلاحيات بالعربية يجب أن تكون نصاً.',
+
+    'permissions_en_required'    => 'حقل الصلاحيات بالإنجليزية مطلوب.',
+    'permissions_en_string'      => 'الصلاحيات بالإنجليزية يجب أن تكون نصاً.',
+
 
 
     /*
@@ -190,6 +199,12 @@ return [
         'file' => 'ملف المهمة',
         'timeMorning' => 'التذكيرات',
         'timeEvening' => 'الفترة المسائية',
+        'lesson_id'            => 'الحصة',
+        'student_id'           => 'الطالب',
+        'tutor_id'             => 'المُعلم',
+        'status'               => 'الحالة',
+        'enrollment_date_time' => 'تاريخ ووقت التسجيل',
+        'notes'                => 'الملاحظات',
     ],
 
 ];
