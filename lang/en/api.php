@@ -1,6 +1,13 @@
 <?php
 
 return [
+    'addRole' => 'Permissions added successfully',
+    'updateRole' => 'Permissions updated successfully',
+    'deleteRole' => 'Permissions deleted successfully',
+    'fetch_successEnrollment' => 'Fetched successfully.',
+    'addEnrollment'       => 'Enrollment created successfully.',
+    'updatedEnrollment'       => 'Enrollment updated successfully.',
+    'deletedEnrollment'       => 'Enrollment deleted successfully.',
     'notFoundRoute' => 'not Found Route',
     'returnData' => 'Data retrieved successfully',
     'notAuth' => 'You are not authorized to access',
@@ -94,6 +101,7 @@ return [
     'city_created' => 'City created successfully',
     'city_updated' => 'City updated successfully',
     'city_deleted' => 'City deleted successfully',
+
     'levels_all' => 'All levels retrieved successfully',
     'level_not_found' => 'Level not found', 
     'level_found' => 'Level found successfully',
@@ -118,4 +126,5 @@ return [
     'student_created' => 'Student created successfully',
     'student_updated' => 'Student updated successfully',  
     'student_deleted' => 'Student deleted successfully',
+
 ];

@@ -131,6 +131,16 @@ return [
     'uuid' => 'The :attribute must be a valid UUID.',
     'invalid_credentials' => 'Invalid login credentials',
 
+
+    'name_required'              => 'The name field is required.',
+    'name_string'                => 'The name must be a valid string.',
+
+    'permissions_ar_required'    => 'Arabic permissions field is required.',
+    'permissions_ar_string'      => 'Arabic permissions must be a string.',
+
+    'permissions_en_required'    => 'English permissions field is required.',
+    'permissions_en_string'      => 'English permissions must be a string.',
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -159,6 +169,13 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'lesson_id'            => 'lesson',
+        'student_id'           => 'student',
+        'tutor_id'             => 'tutor',
+        'status'               => 'status',
+        'enrollment_date_time' => 'enrollment date & time',
+        'notes'                => 'notes',
+    ],
 
 ];

@@ -8,12 +8,18 @@ use Illuminate\Http\Resources\Json\JsonResource;
 class RoleResource extends JsonResource
 {
     /**
-     * Transform the resource into an array.
+     * Transform the Role model into an array for API responses.
      *
+     * @param  Request  $request
      * @return array<string, mixed>
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id'             => $this->id,
+            'name'           => $this->name,
+            'permissions_ar' => $this->formatPermissions($this->permissions_ar),
+            'permissions_en' => $this->formatPermissions($this->permissions_en),
+        ];
     }
 }
