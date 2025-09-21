@@ -41,9 +41,20 @@ class CountryController extends Controller
      */
     public function index(Request $request)
     {
-        $perPage = $request->get('page', 10);
+        $perPage = (int) $request->get('per_page', 10);
         $countries = $this->service->paginate($perPage);
-        return $this->returnData("data", ["countries" => CountryResource::collection($countries)], __("api.countries_all"));
+
+        $pagination = [
+            'total'         => $countries->total(),
+            'per_page'      => $countries->perPage(),
+            'current_page'  => $countries->currentPage(),
+            'total_pages'   => $countries->lastPage(),
+        ];
+
+        return $this->returnData("data", [
+            "countries" => CountryResource::collection($countries),
+            "pagination" => $pagination,
+        ], __("api.countries_all"));
     }
 
     /**
@@ -103,6 +114,6 @@ class CountryController extends Controller
         if (!$deleted) {
             return $this->returnError(404, __("api.country_not_found"));
         }
-        return $this->returnSuccess(__("api.country_deleted"));
+        return $this->returnSuccess(200, __("api.country_deleted"));
     }
 }
