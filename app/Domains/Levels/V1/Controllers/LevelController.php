@@ -118,6 +118,6 @@ class LevelController extends Controller
         if (!$deleted) {
             return $this->returnError(404, __("api.Level_not_found"));
         }
-        return $this->returnSuccess(__("api.Level_deleted"));
+        return $this->returnSuccess(200, __("api.Level_deleted"));
     }
 }

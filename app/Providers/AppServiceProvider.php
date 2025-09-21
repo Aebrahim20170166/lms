@@ -31,6 +31,16 @@ class AppServiceProvider extends ServiceProvider
             \App\Domains\Courses\Contracts\CourseInterface::class,
             \App\Domains\Courses\Repositories\CourseRepository::class,
         );
+
+        $this->app->bind(
+            \App\Domains\Lessons\Contracts\LessonInterface::class,
+            \App\Domains\Lessons\Repositories\LessonRepository::class,
+        );
+
+        $this->app->bind(
+            \App\Domains\Students\Contracts\StudentInterface::class,
+            \App\Domains\Students\Repositories\StudentRepository::class,
+        );  
     }
 
     /**

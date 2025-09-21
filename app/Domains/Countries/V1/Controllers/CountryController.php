@@ -114,6 +114,6 @@ class CountryController extends Controller
         if (!$deleted) {
             return $this->returnError(404, __("api.country_not_found"));
         }
-        return $this->returnSuccess(__("api.country_deleted"));
+        return $this->returnSuccess(200, __("api.country_deleted"));
     }
 }

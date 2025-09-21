@@ -69,6 +69,6 @@ class CityController extends Controller
         if (!$deleted) {
             return $this->returnError(404, __("api.city_not_found"));
         }
-        return $this->returnSuccess(__("api.city_deleted"));
+        return $this->returnSuccess(200, __("api.city_deleted"));
     }
 }

@@ -113,6 +113,6 @@ class CourseController extends Controller
         if (!$deleted) {
             return $this->returnError(404, __("api.course_not_found"));
         }
-        return $this->returnSuccess(__("api.course_deleted"));
+        return $this->returnSuccess(200, __("api.course_deleted"));
     }
 }
